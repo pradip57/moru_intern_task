@@ -8,28 +8,27 @@ const FormActionComponents = ({
   deleteTrans,
   editUrl,
   viewUrl,
-  viewTrans
+  viewTrans,
 }: {
   id: string;
   deleteTrans: Function;
   editUrl: string;
-  viewUrl:string
-  viewTrans:Function
+  viewUrl: string;
+  viewTrans: Function;
 }) => {
-
-  const handleView = async(e:any)=>{
-    try{
-      viewTrans(id)
-      toast.success("Transaction's Details Viewed Succesfully")
-    }catch(exception){
-      toast.error("Transaction's Detailed cannot fetched")
+  const handleView = async () => {
+    try {
+      viewTrans(id);
+      toast.success("Transaction's Details Viewed Succesfully");
+    } catch (exception) {
+      toast.error("Transaction's Detailed cannot fetched");
     }
-  }
+  };
 
   const handleDelete = async (e: any) => {
     e.preventDefault();
     try {
-      const result = await Swal.fire({
+      await Swal.fire({
         title: "Are you sure?",
         text: "You won't be able to revert this!",
         icon: "warning",
@@ -54,7 +53,8 @@ const FormActionComponents = ({
   return (
     <>
       <td className="text-center whitespace-nowrap px-4 py-2">
-        <NavLink onClick={handleView}
+        <NavLink
+          onClick={handleView}
           to={viewUrl}
           className="inline-block rounded mx-1 bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
         >

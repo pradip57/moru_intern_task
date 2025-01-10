@@ -10,7 +10,7 @@ const MoruViewSinglePage = () => {
     const dataFetch = await moruSvc.view(params.id as string);
 
     setData(dataFetch.data.result);
-  });
+  }, [params]);
 
   useEffect(() => {
     detailedData();

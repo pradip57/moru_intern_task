@@ -49,7 +49,7 @@ const MoruDigitalCreatePage = () => {
 
       console.log(data);
 
-      const response = await moruSvc.create(data);
+      await moruSvc.create(data);
       toast.success("Transaction's Details added Successfully.");
       navigate("/");
     } catch (exception) {
