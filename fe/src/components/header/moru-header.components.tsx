@@ -1,4 +1,4 @@
-// import moruLogo from "../../assets/images/Moru_logo.png";
+import moruLogo from "../../assets/images/Moru_logo.png";
 
 const MoruHeaderComponent = () => {
   return (
