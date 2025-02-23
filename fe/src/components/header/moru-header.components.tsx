@@ -1,4 +1,4 @@
-import moruLogo from "../../assets/images/Moru_logo.png";
+// import moruLogo from "../../assets/images/Moru_logo.png";
 
 const MoruHeaderComponent = () => {
   return (
@@ -14,7 +14,7 @@ const MoruHeaderComponent = () => {
             </a>
 
             <p className="block py-2  text-red-700 rounded font-bold text-2xl">
-              INTERNSHIP TASK
+              CRUD OPERATION
             </p>
           </div>
         </div>
